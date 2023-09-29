@@ -1,6 +1,5 @@
 
 import timer.Timer
-import kotlin.math.min
 
 /**
  * A rate limiter the rate of change of some value. This is useful for implementing
@@ -15,7 +14,7 @@ class RateLimiter {
 	 * The rate-of-change limit in the positive direction, in units per second.
 	 * This is expected to be positive.
 	 */
-	var positiveRateLimit: Double
+	var positiveRateLimit: Double = 0.0 // This value will be changed when the constructor is called
 		set(value) {
 			require(value > 0)
 			field = value
@@ -24,7 +23,7 @@ class RateLimiter {
 	 * The rate-of-change limit in the negative direction, in units per second.
 	 * This is expected to be negative.
 	 */
-	var negativeRateLimit: Double
+	var negativeRateLimit: Double = 0.0 // This value will be changed when the constructor is called
 		set(value) {
 			require(value < 0)
 			field = value
