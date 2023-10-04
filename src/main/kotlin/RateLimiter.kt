@@ -2,7 +2,7 @@
 import timer.Timer
 
 /**
- * A rate limiter the rate of change of some value. This is useful for implementing
+ * A rate limiter limits the rate of change of some value. This is useful for implementing
  * voltage ramps, velocity ramps and the like. For controlling position, consider using
  * a trapezoid profile instead.
  *
